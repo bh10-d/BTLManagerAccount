@@ -21,21 +21,21 @@ public class demo5 {
 		listtt.setFont(new Font("Calibri", Font.BOLD, 15));
 		
 		
-		JLabel yourmoney = new JLabel("Your Money");
+		JLabel yourmoney = new JLabel("Enter Money");
 		yourmoney.setFont(new Font("Calibri",Font.BOLD,30));
 		JLabel date = new JLabel("Date");
 		date.setFont(new Font("Calibri",Font.BOLD,30));
 		JLabel des = new JLabel("Description");
 		des.setFont(new Font("Calibri",Font.BOLD,30));
-		JLabel sum = new JLabel("Account balance = ");
+		JLabel sum = new JLabel("Account Balance = ");
 		sum.setFont(new Font("Calibri",Font.BOLD,25));
 		JLabel list = new JLabel("List");
 		list.setFont(new Font("Calibri", Font.BOLD, 40));
 		
 		
 		JButton Add = new JButton("Add");
-		JButton Change = new JButton("Change");
-		JButton Delete = new JButton("Delete");
+		JButton Charts = new JButton("Charts");
+		JButton Sub = new JButton("Sub");
 		
 		
 		JTextField moneyt = new JTextField();
@@ -62,8 +62,8 @@ public class demo5 {
 		list.setBounds(40, 0, 100, 50);
 		
 		Add.setBounds(500, 500, 90, 30);
-		Change.setBounds(620, 500, 90, 30);
-		Delete.setBounds(740, 500, 90, 30);
+		Charts.setBounds(740, 500, 90, 30);
+		Sub.setBounds(620, 500, 90, 30);
 		
 		
 		moneyt.setBounds(500, 100, 300, 50);
@@ -79,8 +79,8 @@ public class demo5 {
 		frame.add(sum);
 		frame.add(list);
 		frame.add(Add);
-		frame.add(Change);
-		frame.add(Delete);
+		frame.add(Charts);
+		frame.add(Sub);
 		frame.add(moneyt);
 		frame.add(datet);
 		frame.add(dest);
@@ -110,7 +110,7 @@ public class demo5 {
 			}
 		});
 		
-		Change.addActionListener(new ActionListener() {
+		Sub.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -119,10 +119,11 @@ public class demo5 {
 			}
 		});
 		
-		Delete.addActionListener(new ActionListener() {
+		Charts.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
 				
 				
 			}
