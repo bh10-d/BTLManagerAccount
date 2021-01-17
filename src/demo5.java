@@ -27,8 +27,8 @@ public class demo5 {
 		date.setFont(new Font("Calibri",Font.BOLD,30));
 		JLabel des = new JLabel("Description");
 		des.setFont(new Font("Calibri",Font.BOLD,30));
-		JLabel sum = new JLabel("Sum = ");
-		sum.setFont(new Font("Calibri",Font.BOLD,30));
+		JLabel sum = new JLabel("Account balance = ");
+		sum.setFont(new Font("Calibri",Font.BOLD,25));
 		JLabel list = new JLabel("List");
 		list.setFont(new Font("Calibri", Font.BOLD, 40));
 		
@@ -58,7 +58,7 @@ public class demo5 {
 		yourmoney.setBounds(500, 50, 200,30);
 		date.setBounds(500, 200, 200, 30);
 		des.setBounds(500, 350, 200, 30);
-		sum.setBounds(100, 480, 200, 60);
+		sum.setBounds(10, 480, 250, 60);
 		list.setBounds(40, 0, 100, 50);
 		
 		Add.setBounds(500, 500, 90, 30);
@@ -130,7 +130,7 @@ public class demo5 {
 		
 		
 		
-		
+	
 		//-----------------//
 		frame.setLayout(null);
 		frame.add(panel);
