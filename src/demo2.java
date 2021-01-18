@@ -28,7 +28,7 @@ public class demo2 {
 		
 		
 		//Button
-		JButton add = new JButton("Add");
+		JButton add = new JButton("Addd");
 		JButton change = new JButton("Change");
 		JButton delete = new JButton("Delete");
 		
