@@ -85,7 +85,7 @@ public class Screentwo{
 		frame.add(datet);
 		frame.add(dest);
 		frame.add(sumt);
-		//frame.add(listtt);
+		frame.add(listtt);
 		
 	//-----------------------------------
 		frame.add(panel);
