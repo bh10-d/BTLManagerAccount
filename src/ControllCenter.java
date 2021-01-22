@@ -5,12 +5,13 @@ import java.awt.event.ActionListener;
 public class ControllCenter extends Centre{
 	public ControllCenter() {
 		Centre center = new Centre();
+		
 		center.getAdd().addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				center.getSumt().getText();
+				
 				
 			}
 		});
@@ -19,7 +20,7 @@ public class ControllCenter extends Centre{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
 				
 			}
 		});
@@ -29,7 +30,8 @@ public class ControllCenter extends Centre{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
+				
 				
 			}
 		});
