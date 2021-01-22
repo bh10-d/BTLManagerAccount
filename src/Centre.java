@@ -84,7 +84,12 @@ public class Centre extends Screentwo {
 	public void setDest(JTextField dest) {
 		this.dest = dest;
 	}
-	
+	public JTextArea getSumt() {
+		return sumt;
+	}
+	public void setSumt(JTextArea sumt) {
+		this.sumt = sumt;
+	}
 	
 }
 
