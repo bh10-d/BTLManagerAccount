@@ -1,87 +1,90 @@
-
-import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
 
-
-public class Centre {
-    public static void main(String[]args) {
-    	
-        JFrame frame = new JFrame();
-        JPanel basic = new JPanel();
-        
-        basic.setLayout(new BoxLayout(basic, BoxLayout.X_AXIS));
-        
-        
-        
-        frame.add(basic);
-        basic.add(Box.createVerticalGlue());
-        
-
-        JPanel centre = new JPanel();	
-        centre.setAlignmentY(Component.RIGHT_ALIGNMENT);
-        centre.setLayout(new BoxLayout(centre, BoxLayout.Y_AXIS));
-        
-        
-        
-        JLabel label1 = new JLabel();
-        JLabel label2 = new JLabel();
-        JLabel label3 = new JLabel();
-        
-        
-//        JTextField textField = new JTextField();
-        
-        label1.setText("Set Money");
-       
-        
-        JTextField textField = new JTextField();
-//        textField.setBounds(200, 50, 10, 30);
-        label2.setText("Set Date");
-        
-        JTextField textField1 = new JTextField();
-//        textField1.setBounds(200, 100, 10, 30);
-        label3.setText("Set Description");
-        
-        JTextField textField2 = new JTextField();
-//        textField2.setBounds(200, 150, 10, 30);
-        
-        
-        centre.add(label1);
-        centre.add(Box.createRigidArea(new Dimension(15,0)));
-        
-//        centre.add(textField);
-//        centre.add(Box.createRigidArea(new Dimension(15,0)));
-        
-        centre.add(label2);
-        centre.add(Box.createRigidArea(new Dimension(15,0)));
-        
-        
-//        centre.add(textField1);
-//        centre.add(Box.createRigidArea(new Dimension(15,0)));
-        
-        
-        centre.add(label3);
-        centre.add(Box.createRigidArea(new Dimension(15,0)));
-        
-        
-//        centre.add(textField2);
-//        centre.add(Box.createRigidArea(new Dimension(15,0)));
-        
-        
-        
-        basic.add(label1);
-//        basic.add(textField);
-        basic.add(label2);
-//        basic.add(textField1);
-        basic.add(label3);
-//        basic.add(textField2);
-        
-        
-        
-        
-        
-        
-        frame.setSize(400, 400);
-        frame.setVisible(true);
-    }
+public class Centre extends Screentwo {
+	private JLabel yourmoney;
+	private JLabel date;
+	private JLabel des;
+	private JLabel sum;
+	private JLabel list;
+	private JButton Add;
+	private JButton Sub;
+	private JButton Charts;
+	private JTextField moneyt;
+	private JTextField datet;
+	private JTextField dest;
+	private JTextArea sumt;
+	
+	
+	
+	public JLabel getYourMoney() {
+		return yourmoney;
+	}
+	public void setYourMoney(JLabel yourmoney) {
+		this.yourmoney = yourmoney;
+	}
+	public JLabel getDate() {
+		return date;
+	}
+	public void setDate(JLabel date) {
+		this.date = date;
+	}
+	public JLabel getDes() {
+		return des;
+	}
+	public void setDes(JLabel des) {
+		this.des = des;
+	}
+	public JLabel getSum() {
+		return sum;
+	}
+	public void setSum(JLabel sum) {
+		this.sum = sum;
+	}
+	
+	public JLabel getList() {
+		return list;
+	}
+	public void setList(JLabel list) {
+		this.list = list;
+	}
+	public JButton getAdd() {
+		return Add;
+	}
+	public void setAdd(JButton Add) {
+		this.Add = Add;
+	}
+	public JButton getSub() {
+		return Sub;
+	}
+	public void setSub(JButton Sub) {
+		this.Sub = Sub;
+	}
+	
+	public JButton getCharts() {
+		return Charts;
+	}
+	public void setCharts(JButton Charts) {
+		this.Charts = Charts;
+	}
+	public JTextField getMoneyt() {
+		return moneyt;
+	}
+	public void setMoneyt(JTextField moneyt) {
+		this.moneyt = moneyt;
+	}
+	public JTextField getDatet() {
+		return datet;
+	}
+	public void setDatet(JTextField datet) {
+		this.datet = datet;
+	}
+	public JTextField getDest() {
+		return dest;
+	}
+	public void setDest(JTextField dest) {
+		this.dest = dest;
+	}
+	
+	
 }
+

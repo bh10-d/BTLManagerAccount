@@ -1,29 +1,18 @@
-
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 import javax.swing.*;
 
 
-public class Screentwo extends Frame{
-	
-	private JFrame frame;
-	private JPanel panel;
-
-	
-//	public Screentwo() {
-//		Sct();
-//	}
-
+public class Screentwo{
 
 	public void Screen() {
 		
-		frame = new JFrame("Account Manager");
-		setMinimumSize(new Dimension(900, 600));
-		setMaximumSize(new Dimension(900, 600));
+		JFrame frame = new JFrame("Account Manager");
+		frame.setMinimumSize(new Dimension(900, 600));
+		frame.setMaximumSize(new Dimension(900, 600));
 		
-		panel = new JPanel();
+		JPanel panel = new JPanel();
 		panel.setBounds(450, 0, 450, 600);
 		panel.setBackground(Color.gray);
 		
@@ -96,19 +85,12 @@ public class Screentwo extends Frame{
 		frame.add(datet);
 		frame.add(dest);
 		frame.add(sumt);
-		frame.add(listtt);
+		//frame.add(listtt);
 		
-		
+	//-----------------------------------
 		frame.add(panel);
 		frame.setLayout(null);
-		
-		
-		
-		
 		frame.setVisible(true);
-		
-
-		
 	}
 	
 	
