@@ -13,7 +13,7 @@ public class Centre extends Screentwo {
 	private JTextField datet;
 	private JTextField dest;
 	private JTextArea sumt;
-	
+	private JList listt;
 	
 	
 	public JLabel getYourMoney() {
@@ -40,7 +40,6 @@ public class Centre extends Screentwo {
 	public void setSum(JLabel sum) {
 		this.sum = sum;
 	}
-	
 	public JLabel getList() {
 		return list;
 	}
@@ -90,6 +89,13 @@ public class Centre extends Screentwo {
 	public void setSumt(JTextArea sumt) {
 		this.sumt = sumt;
 	}
+	public JList getListt() {
+		return listt;
+	}
+	public void setListt(JList listt) {
+		this.listt = listt;
+	}
+	
 	
 }
 

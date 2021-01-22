@@ -1,7 +1,11 @@
 import java.sql.*;
+import java.util.*;
 public class DataMA{
-
 	public static void main(String[]args) throws SQLException {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String n = "'admin'";
 		
 		Connection connection = null;
 		
@@ -12,11 +16,19 @@ public class DataMA{
 			System.out.println("Ket noi thanh cong!!!!!!!!!!!!!!!");
 			
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from student");
+//			ResultSet rs = stmt.executeQuery("select * from Dulieu where id='2'");
+			ResultSet rs = stmt.executeQuery("select * from Taikhoan where username= " + n +"and passwordd= "+n);
+			
+			
+			
+//            while (rs.next()) {
+//                System.out.println(rs.getInt(1) + "  " + rs.getString(2) 
+//                        + "  " + rs.getString(3)+" "+rs.getString(4));
+//            }
+			
 			
             while (rs.next()) {
-                System.out.println(rs.getInt(1) + "  " + rs.getString(2) 
-                        + "  " + rs.getString(3));
+                System.out.println(rs.getInt(1));
             }
 			
 		} catch (ClassNotFoundException e) {
