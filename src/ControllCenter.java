@@ -10,7 +10,7 @@ import java.util.*;
 
 public class ControllCenter {
 	storeData2 storeAccount;
-	
+	//ahihi
 	
 	public ControllCenter() {
 		

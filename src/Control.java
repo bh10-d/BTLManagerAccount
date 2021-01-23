@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+/*
 public class Control extends Centre{
 	DataMA1 control = new DataMA1();
 	
@@ -45,3 +45,4 @@ public class Control extends Centre{
 	
 	//------------------
 }
+*/

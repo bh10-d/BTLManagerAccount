@@ -76,7 +76,7 @@ public class Screentwo{
 		frame.setMinimumSize(new Dimension(900,600));
 		frame.setMaximumSize(new Dimension(900,600));
 		
-
+//ahihi
 		yourmoney.setBounds(500, 50, 200,30);
 		date.setBounds(500, 200, 200, 30);
 		des.setBounds(500, 350, 200, 30);
