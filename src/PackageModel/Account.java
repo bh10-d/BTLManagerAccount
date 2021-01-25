@@ -5,28 +5,19 @@ import PackageView.*;
 import PackageController.*;
 
 public class Account {
-	private String user;
-	private String password;
+	
 	private static long money = 0L;
 	private String des;
 	private Dates date;
 	
 
-	public Account(String user,String password) {
-		this.user = user;
-		this.password = password;
-	}
+	
 	public Account(long money,String des,Dates date){
 		this.money = money;
 		this.des = des;
 		this.date = date;
 	}
-	public String getUser() {
-		return user;
-	}
-	public String getPassword() {
-		return password;
-	}
+	
 	//su li tien
 	public static void setMoneyFlus(long moneys) {
 		money += moneys;
@@ -53,6 +44,6 @@ public class Account {
 	}
 	
 	public String toString() {
-		return "USER :"+user+"\n"+"PASSWORD"+password;
+		return "Time :"+date.toString()+", description :"+des+", money :"+money;
 	}
 }

@@ -24,7 +24,6 @@ public class ControllCenter {
 	//ahihi
 	
 	public ControllCenter() {
-		
 		Screentwo.Screen();
 		//Centre center2 = new Centre();
 		

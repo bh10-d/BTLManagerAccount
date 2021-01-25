@@ -2,14 +2,17 @@ package PackageModel;
 
 import java.util.ArrayList;
 
-public class storeData {
-	private ArrayList<Account> arr;
+public class storeData{
+	private ArrayList<FormatUserPass> arrAccount1 = new ArrayList<FormatUserPass>();
 	
-	public storeData(ArrayList<Account> arr) {
-		this.arr = arr;
+	public storeData() {
+		arrAccount1 = arrAccount1;
 	}
-	public ArrayList<Account> getArr() {
-		return arr;
+	public storeData(FormatUserPass user_pass) {
+		arrAccount1.add(user_pass);
 	}
 	
+	public  ArrayList<FormatUserPass> getArr(){
+		return arrAccount1;
+	}
 }

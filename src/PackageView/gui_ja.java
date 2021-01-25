@@ -25,7 +25,6 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
 public class gui_ja extends JFrame {
-
 	protected JPanel contentPane;
 	protected JTextField textFieldUSER;
 	protected JTextField textFieldPASSWORD;
@@ -34,6 +33,7 @@ public class gui_ja extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	/*
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -46,7 +46,7 @@ public class gui_ja extends JFrame {
 			}
 		});
 	}
-
+	*/
 	/**
 	 * Create the frame.
 	 */
@@ -124,5 +124,22 @@ public class gui_ja extends JFrame {
 		gbc_ButtonLOGIN.gridx = 3;
 		gbc_ButtonLOGIN.gridy = 7;
 		contentPane.add(ButtonLOGIN, gbc_ButtonLOGIN);
+	}
+	public JTextField getTextFieldUSER() {
+		return textFieldUSER;
+	}
+	public JTextField getTextFieldPASSWORD() {
+		return textFieldPASSWORD;
+	}
+	public JButton getButtonREGISTER() {
+		return ButtonREGISTER;
+	}
+	
+	public JButton getButtonLOGIN() {
+		return ButtonLOGIN;
+	}
+	
+	public String toString() {
+		return textFieldUSER+" "+textFieldPASSWORD;
 	}
 }
