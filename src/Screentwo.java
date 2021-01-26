@@ -5,14 +5,14 @@ import javax.swing.*;
 
 
 public class Screentwo{
-	
 	private static JLabel yourmoney;
 	private static JLabel date;
 	private static JLabel des;
 	private static JLabel sum;
 	private static JLabel list;
 	private static JPanel panelOfscrollPane;
-	private static JPanel listtt;
+	private static JPanel panel1;
+	private static JList listt;
 	private static JScrollPane scrollPane;
 	private static JButton Add;
 	private static JButton Charts;
@@ -21,28 +21,29 @@ public class Screentwo{
 	private static JTextField datet;
 	private static JTextField dest;
 	private static JTextArea sumt;
-	
-	
+	private static DefaultListModel listmode;
+//___________________________________________________________________________________________________//	
 	public static void Screen() {
-		
+		// Khoi tao cua so chuong trinh
 		JFrame frame = new JFrame("Account Manager");
 		frame.setMinimumSize(new Dimension(900, 600));
 		frame.setMaximumSize(new Dimension(900, 600));
-		
+		// Khoi tao panel
 		JPanel panel = new JPanel();
 		panel.setBounds(450, 0, 450, 600);
 		panel.setBackground(Color.gray);
-		
-
-		listtt = new JPanel();
-		
-		//scrollPane = new JScrollPane(listtt);
-		listtt.setBackground(Color.white);
-		listtt.setFont(new Font("Calibri", Font.BOLD, 15));
-		//scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-		//panelOfscrollPane.add(scrollPane);
-		
-		
+//__________________________________________________________________________________________________//
+		// Khoi tao panel1 dung de chua list
+		panel1 = new JPanel();
+		panel1.setBackground(Color.white);
+		listt = new JList();
+		listt.setFont(new Font("Calibri", Font.BOLD, 15));
+		//Khoi tao con lan!!!
+		scrollPane = new JScrollPane();
+		scrollPane.getViewport().add(listt);
+		scrollPane.setPreferredSize(new Dimension(370,428));
+//___________________________________________________________________________________________________//
+		// Khoi tao cac tieu de cho tung thanh phan
 		/*JLabel*/ yourmoney = new JLabel("Enter Money");
 		yourmoney.setFont(new Font("Calibri",Font.BOLD,30));
 		/*JLabel*/ date = new JLabel("Date");
@@ -53,49 +54,51 @@ public class Screentwo{
 		sum.setFont(new Font("Calibri",Font.BOLD,25));
 		/*JLabel*/ list = new JLabel("List");
 		list.setFont(new Font("Calibri", Font.BOLD, 40));
-		
-		
+		/*
+		 * Khoi tao cac button chuc nang cua chuong trinh 
+		 */
+		// Add button!!!!!
 		Add = new JButton("Add");
+		Add.setBackground(Color.pink);
+		//Charts button!!!!!
 		Charts = new JButton("Charts");
+		Charts.setBackground(Color.pink);
+		//Sub button!!!!!
 		Sub = new JButton("Sub");
-		
-		
+		Sub.setBackground(Color.pink);
+		// Khoi tao cac vung nhap du lieu vao chuong trinh
 		/*JTextField*/ moneyt = new JTextField();
 		moneyt.setFont(new Font("Calibri", Font.BOLD, 30));
 		/*JTextField*/ datet = new JTextField();
 		datet.setFont(new Font("Calibri", Font.BOLD, 30));
 		/*JTextField*/ dest = new JTextField();
 		dest.setFont(new Font("Calibri", Font.BOLD, 20));
-		
-		
+		// Khoi tao vung xuat thong tin duoc xu ly tu chuong trinh
 		/*JTextArea*/ sumt = new JTextArea();
 		sumt.setFont(new Font("Calibri", Font.BOLD, 30));
-//		JTextArea listt = new JTextArea();
-//		listt.setFont(new Font("Calibri", Font.BOLD, 15));
-
-		frame.setMinimumSize(new Dimension(900,600));
-		frame.setMaximumSize(new Dimension(900,600));
-		
-//ahihi
+		/* 
+		 * Tao vi tri cho cac button, label, jlist.
+		 */
+		// Khoi tao cac label 
 		yourmoney.setBounds(500, 50, 200,30);
 		date.setBounds(500, 200, 200, 30);
 		des.setBounds(500, 350, 200, 30);
 		sum.setBounds(10, 480, 250, 60);
-		list.setBounds(40, 0, 100, 50);
-		listtt.setBounds(40,40,370,420);//listtt
-		//panelOfscrollPane.setSize(380, 430);
-		
+		list.setBounds(40, 0, 100, 50);//label
+		// Thiet lap vi tri cho panel1
+		panel1.setBounds(40,40,370,435);
+		// Thiet lap vi tri cho cac button
 		Add.setBounds(500, 500, 90, 30);
 		Charts.setBounds(740, 500, 90, 30);
 		Sub.setBounds(620, 500, 90, 30);
-		
-		
+		// Thiet lap vi tri cho cac vung nhap du lieu
 		moneyt.setBounds(500, 100, 300, 50);
 		datet.setBounds(500, 250, 300, 50);
 		dest.setBounds(500, 400, 300, 50);
 		sumt.setBounds(200, 490, 200, 30);// textArea nay se tinh tong so tien hien co!!!
-
-		
+//___________________________________________________________________________________________________//
+		// Thiet lap hien thi cho cac component(thanh phan)
+		panel1.add(scrollPane);
 		frame.add(yourmoney);
 		frame.add(date);
 		frame.add(des);
@@ -108,46 +111,38 @@ public class Screentwo{
 		frame.add(datet);
 		frame.add(dest);
 		frame.add(sumt);
-		frame.add(listtt);
-		//frame.add(panelOfscrollPane);
-		
-	//-----------------------------------
+		frame.add(panel1);
+		// Thiet lap hien thi cho chuong trinh
 		frame.add(panel);
 		frame.setLayout(null);
 		frame.setVisible(true);
+//___________________________________________________________________________________________________//
 	}
-	
 	
 	public static JLabel getYourmoney() {
 		return yourmoney;
 	}
 	
-
 	public static JLabel getDate() {
 		return date;
 	}
-
 
 	public static JLabel getDes() {
 		return des;
 	}
 
-
 	public static JLabel getSum() {
 		return sum;
 	}
-
 
 	public static JLabel getList() {
 		return list;
 	}
 
-
 	public static JTextField getMoneyt() {
 		return moneyt;
 	}
 	
-
 	public static JTextField getDatet() {
 		return datet;
 	}
@@ -156,35 +151,31 @@ public class Screentwo{
 		return dest;
 	}
 
-
 	public static JTextArea getSumt() {
 		return sumt;
 	}
 
-
 	public static JButton getAdd() {
 		return Add;
 	}
-	public static void setAdd() {
-		
-	}
-	
+
 	public static JButton getCharts() {
 		return Charts;
-	}
-	public static void setCharts() {
-		
 	}
 	
 	public static JButton getSub() {
 		return Sub;
 	}
-	public static void setSub() {
-		
+	
+	public static JPanel getPanel() { 
+		return panel1;
 	}
 	
-	public static JPanel getPanel() {
-		return listtt;
+	public static JList getListt() {
+		return listt;
 	}
 	
+	public static JScrollPane getScrollPane() {
+		return scrollPane;
+	}
 }

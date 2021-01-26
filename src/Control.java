@@ -1,48 +1,118 @@
-import java.awt.Component;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.util.Vector;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-/*
-public class Control extends Centre{
-	DataMA1 control = new DataMA1();
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import java.util.*;
+
+public class Control{
+	private String textYourMoney;
+	private long longYourMoney;
+	private String textDate;
+	private Dates YourDate;
+	private String[] arrTextDate;
+	private String textDes;
+	private Account account;
+	private ArrayList<Account> temporaryStorage;
+	private String textLabels;
+	private storeData2 storeAccount;
+	private String textdate;//nhan du lieu//
+	private String textmoney;//nhan du lieu//
 	
-	//------------------
+	public Control() {
+		
+	}
 	
-	private void btnAddActionPerformed(ActionEvent arg0) {
-		Component contentPane = null;
-		try {
-		    //Lấy dữ liệu nhập trên phần mềm
-			String money = getMoneyt().getText();
-		    String date = getDatet().getText();
-		    String description = getDest().getText();
-
-
-		    // Kiểm tra dữ liệu nhập vào, kiểm tra trùng khóa chính trong database
-//		    if (manager.checkStudent(Sno)) throw new Exception("This student ID is already exits in database!");
-//		    if (!Validation.checkIdFormat(Sno)) throw new Exception("Id of student can not contain space!");
-//		    if (!Validation.checkNameFormat(Sname)) throw new Exception("Name of student can not contain special(s) character!");
-//		    if (!Validation.checkIdFormat(Sclass)) throw new Exception("Name of class can not contain special(s) character!");
-//		    if (!Validation.checkNameFormat(Sadress)) throw new Exception("Adress can not contain special(s) character!");
-
-		    // Thêm dữ liệu vào database
-		    control.addNew(money, date, description);
-		    Vector<String> header = new Vector<String>();
-			header.add("ID");
-			header.add("Name");
-			header.add("Gender");
-		    // Cập nhật hiển thị database cho phần mềm
-		  
-		    Vector<Vector<String>> data = control.getAll();
-		    ((DefaultTableModel) (getListt().getModel())).setDataVector(data, header);
-
-		    // Thông báo thành công
-		    JOptionPane.showMessageDialog(contentPane, "Add Success!", "Sucess", JOptionPane.INFORMATION_MESSAGE);
-		} catch (Exception e1) {
-		    JOptionPane.showMessageDialog(contentPane, "Add new failure\nDetails: " + e1, "Error", JOptionPane.ERROR_MESSAGE);
-		}
-	    }
+	public Control(String textdate, String textDes,String textmoney) {
+		super();
+		this.textdate = textdate;
+		this.textDes = textDes;
+		this.textmoney = textmoney;
+		
+	}
 	
-	//------------------
+	
+	
+	
+	public String getTextYourMoney() {
+		return textYourMoney;
+	}
+	public void setTextYourMoney(String textYourMoney) {
+		this.textYourMoney = textYourMoney;
+	}
+	public long getLongYourMoney() {
+		return longYourMoney;
+	}
+	public void setLongYourMoney(long longYourMoney) {
+		this.longYourMoney = longYourMoney;
+	}
+	public String getTextDate() {
+		return textDate;
+	}
+	public void setTextDate(String textDate) {
+		this.textDate = textDate;
+	}
+	public Dates getYourDate() {
+		return YourDate;
+	}
+	public void setYourDate(Dates yourDate) {
+		YourDate = yourDate;
+	}
+	public String[] getArrTextDate() {
+		return arrTextDate;
+	}
+	public void setArrTextDate(String[] arrTextDate) {
+		this.arrTextDate = arrTextDate;
+	}
+	public String getTextDes() {
+		return textDes;
+	}
+	public void setTextDes(String textDes) {
+		this.textDes = textDes;
+	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	public ArrayList<Account> getTemporaryStorage() {
+		return temporaryStorage;
+	}
+	public void setTemporaryStorage(ArrayList<Account> temporaryStorage) {
+		this.temporaryStorage = temporaryStorage;
+	}
+	public String getTextLabels() {
+		return textLabels;
+	}
+	public void setTextLabels(String textLabels) {
+		this.textLabels = textLabels;
+	}
+	public storeData2 getStoreAccount() {
+		return storeAccount;
+	}
+	public void setStoreAccount(storeData2 storeAccount) {
+		this.storeAccount = storeAccount;
+	}
+//	public String getTextdate() {
+//		return textdate;
+//	}
+//	public void setTextdate(String textdate) {
+//		this.textdate = textdate;
+//	}
+	public String getTextmoney() {
+		return textmoney;
+	}
+	public void setTextmoney(String textmoney) {
+		this.textmoney = textmoney;
+	}
+	
+	@Override
+	public String toString() {
+		return "Date: "+textdate+", Description: "+textDes+", Money: "+textmoney;
+	}
+	
+	
+	
+	
 }
-*/
