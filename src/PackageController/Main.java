@@ -23,10 +23,8 @@ public class Main {
 				}
 			}
 		});
-		//new getGUI_ja();
 		*/
-//		gui_ja frame = new gui_ja();
-//		frame.setVisible(true);
+
 		new ManagerAccount();
 		/*
 		Account ac = new Account("ahihi","yahio");
@@ -38,6 +36,7 @@ public class Main {
 		
 		System.out.println(a.getArr().size());
 		*/
+
 	}
 		
 }

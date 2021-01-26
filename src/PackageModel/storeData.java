@@ -8,10 +8,12 @@ public class storeData{
 	public storeData() {
 		arrAccount1 = arrAccount1;
 	}
-	public storeData(FormatUserPass user_pass) {
+//	public storeData(FormatUserPass user_pass) {
+//		arrAccount1.add(user_pass);
+//	}
+	public void setArr(FormatUserPass user_pass) {
 		arrAccount1.add(user_pass);
 	}
-	
 	public  ArrayList<FormatUserPass> getArr(){
 		return arrAccount1;
 	}

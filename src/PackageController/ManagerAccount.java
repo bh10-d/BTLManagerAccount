@@ -8,9 +8,11 @@ import PackageView.*;
 
 public class ManagerAccount{
 	storeData arrUserPass = new storeData();
-	popUpRegisterSuccess pupUpSuccField;
-	popUpFailRegister popUpFailField;
+	
+	boolean checkLogin = false; 
+	
 	FormatUserPass accountUserPass;
+	
 //	public static void main(String[] args)
 		public ManagerAccount()	{
 		// TODO Auto-generated method stub
@@ -19,43 +21,61 @@ public class ManagerAccount{
 		
 		
 		a.getButtonREGISTER().addActionListener(new ActionListener()  {
+		boolean checkRegister = false;
 		public void actionPerformed(ActionEvent e) {
+			
 			String user = a.getTextFieldUSER().getText();
 			String pass = a.getTextFieldPASSWORD().getText();
-			
 			//lay tu textfield
 			accountUserPass = new FormatUserPass(user,pass);
-			
-			if(arrUserPass.getArr().size() == 0){
-				arrUserPass = new storeData(accountUserPass);
-				pupUpSuccField = new popUpRegisterSuccess();
-			}
-	
-			if(arrUserPass.getArr().size() != 0) {
+//			if(arrUserPass.getArr().size() != 0)
+			if(arrUserPass.getArr().size() == 0) {
+				arrUserPass.setArr(accountUserPass);
+				new popUpRegisterSuccess();
+			}else {
 				for(FormatUserPass accountInArray : arrUserPass.getArr()) {
 					if(accountInArray.getUser() == accountUserPass.getUser()) {
-						popUpFailField = new popUpFailRegister();
-						
+						checkRegister = true;
 					}
-					
 				}
-				arrUserPass = new storeData(accountUserPass);
+				if(checkRegister) {
+					new popUpFailRegister();
+				}else {
+					arrUserPass.setArr(accountUserPass);
+					new popUpRegisterSuccess();
+				}
 				
-//				new popUpRegisterSuccess();
 			}
-			
+//				new popUpRegisterSuccess();
 		}
 		});
-		 
+		
 		a.getButtonLOGIN().addActionListener(e -> {
-			for(FormatUserPass acc : arrUserPass.getArr()) {
-				if(acc.getUser() == accountUserPass.getUser()) {
+			
+			if(arrUserPass.getArr().size() == 0){
+				new popUpFailLogin();
+			} else {
+				for(FormatUserPass acc : arrUserPass.getArr()) {
+					if(acc.getUser() == accountUserPass.getUser()) {
+						checkLogin = true;
+					}
+				}
+				if(checkLogin) {
 					new ControllCenter();
 					a.dispose();
-				}else {
+				}else { 
 					new popUpFailLogin();
 				}
+				
+				
 			}
+//			for(FormatUserPass acc : arrUserPass.getArr()) {
+//				if(acc.getUser() == accountUserPass.getUser()) {
+//					new ControllCenter();
+//					a.dispose();
+//				}
+//			}
+			
 		});
 		//new ControllCenter(); 
 	}
