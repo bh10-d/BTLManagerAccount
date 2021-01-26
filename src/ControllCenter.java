@@ -92,10 +92,7 @@ public class ControllCenter {
 				String textYourMoney = Screentwo.getMoneyt().getText();
 				Account.setMoneySub(Long.parseLong(textYourMoney));
 				long longYourMoney = Account.getMoney();
-				
 				String textDate = Screentwo.getDatet().getText();
-
-				
 				String[] arrTextDate = textDate.split("/");
 				Dates YourDate = new Dates(Integer.parseInt(arrTextDate[0]),
 						Integer.parseInt(arrTextDate[1]),Integer.parseInt(arrTextDate[2]));
@@ -126,8 +123,6 @@ public class ControllCenter {
 				// Lay du lieu ra va in ra man hinh
 				textLabels.setText(Ctrl.getTextDate()+Ctrl.getTextDes()+Ctrl.getTextmoney());
 				mode.addElement(new Control(Ctrl.getTextDate(),Ctrl.getTextDes(),Ctrl.getTextmoney()));
-				
-				
 				
 //_________________________________________________________________________________________//				
 				//Screentwo.getScrollPane().add(textmoney);
