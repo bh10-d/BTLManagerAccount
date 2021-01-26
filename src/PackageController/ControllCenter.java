@@ -12,7 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
-
+import PackageModel.*;
+import PackageView.*;
 import java.util.*;
 
 public class ControllCenter {

@@ -29,6 +29,7 @@ public class ManagerAccount{
 			//lay tu textfield
 			accountUserPass = new FormatUserPass(user,pass);
 //			if(arrUserPass.getArr().size() != 0)
+			//bị mảng hành....
 			if(arrUserPass.getArr().size() == 0) {
 				arrUserPass.setArr(accountUserPass);
 				new popUpRegisterSuccess();

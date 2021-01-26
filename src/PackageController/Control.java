@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import PackageModel.*;
+import PackageView.*;
 import javax.swing.*;
 import java.util.*;
 
