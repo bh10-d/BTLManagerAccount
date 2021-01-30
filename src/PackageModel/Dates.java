@@ -20,6 +20,6 @@ public class Dates {
 		return year;
 	}
 	public String toString() {
-		return day+"/"+month+"/"+year;
+		return day+"-"+month+"-"+year;
 	}
 }

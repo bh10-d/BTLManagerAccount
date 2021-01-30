@@ -1,42 +1,31 @@
 package PackageController;
-
-import PackageView.*;
-
-import java.awt.EventQueue;
-import java.util.ArrayList;
+import java.sql.*;
 
 import PackageModel.*;
-
-
+import PackageView.*;
 public class Main {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String args[]) {
+		new ControlRegisterForm();
 		/*
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					gui_ja frame = new gui_ja();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		try {
+			ConnectDatabase a = new ConnectDatabase();
+			Statement sttm = a.getCon().createStatement();
+			
+			ResultSet rs = sttm.executeQuery("Select * from tableuserpassword");
+			while(rs.next()) {
+				System.out.println(rs.getString("users")+"  "+rs.getString("passwords"));
 			}
-		});
-		*/
-
-		new ManagerAccount();
-		/*
-		Account ac = new Account("ahihi","yahio");
-		storeData a = new storeData();
 		
-		for(Account i : a.getArr()) {
-			System.out.println(i.toString());
+		
+		
+		
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-		System.out.println(a.getArr().size());
 		*/
-
-	}
 		
+		
+	}
+	
 }

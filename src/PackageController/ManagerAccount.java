@@ -5,79 +5,77 @@ import java.util.*;
 
 import PackageModel.*;
 import PackageView.*;
+import java.sql.*;
 
+// su li toan bo chuong trinh
 public class ManagerAccount{
-	storeData arrUserPass = new storeData();
 	
-	boolean checkLogin = false; 
+	private ConnectDatabase varConnect;
+	private Statement sttm;
+//	private PreparedStatement preSttm;
+	private String str;
+	private String str2;
+	private String Strtt;
 	
-	FormatUserPass accountUserPass;
+//	FormatUserPass accountUserPass;
 	
-//	public static void main(String[] args)
-		public ManagerAccount()	{
-		// TODO Auto-generated method stub
-		gui_ja a = new gui_ja();
+
+	public ManagerAccount()	throws Exception{
+		gui_ja a = new gui_ja(); 
 		a.setVisible(true);
 		
 		
-		a.getButtonREGISTER().addActionListener(new ActionListener()  {
-		boolean checkRegister = false;
-		public void actionPerformed(ActionEvent e) {
+		varConnect = new ConnectDatabase();
+		sttm = varConnect.getCon().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+	
+//		String SQL = "SELECT * FROM tableuserpassword"; 
+//		ResultSet rs = sttm.executeQuery(SQL);
 			
-			String user = a.getTextFieldUSER().getText();
-			String pass = a.getTextFieldPASSWORD().getText();
-			//lay tu textfield
-			accountUserPass = new FormatUserPass(user,pass);
-//			if(arrUserPass.getArr().size() != 0)
-			//bị mảng hành....
-			if(arrUserPass.getArr().size() == 0) {
-				arrUserPass.setArr(accountUserPass);
-				new popUpRegisterSuccess();
-			}else {
-				for(FormatUserPass accountInArray : arrUserPass.getArr()) {
-					if(accountInArray.getUser() == accountUserPass.getUser()) {
-						checkRegister = true;
-					}
-				}
-				if(checkRegister) {
-					new popUpFailRegister();
-				}else {
-					arrUserPass.setArr(accountUserPass);
-					new popUpRegisterSuccess();
-				}
-				
-			}
-//				new popUpRegisterSuccess();
+		// TODO Auto-generated catch block
+		a.getButtonREGISTER().addActionListener(new ActionListener()  {
+		public void actionPerformed(ActionEvent e) {
+			new ControlRegisterForm();
 		}
 		});
 		
 		a.getButtonLOGIN().addActionListener(e -> {
 			
-			if(arrUserPass.getArr().size() == 0){
-				new popUpFailLogin();
-			} else {
-				for(FormatUserPass acc : arrUserPass.getArr()) {
-					if(acc.getUser() == accountUserPass.getUser()) {
+			String user = a.getTextFieldUSER().getText();
+			String pass = String.valueOf(a.getFieldPass().getPassword());
+			boolean checkLogin = false;
+			try {
+				String SQL = "SELECT * FROM tableuserpassword"; 
+				ResultSet rs = sttm.executeQuery(SQL);
+				while(rs.next()) {
+	
+					if(rs.getString("users").equals(user) && rs.getString("passwords").equals(pass)) {
 						checkLogin = true;
 					}
+
 				}
-				if(checkLogin) {
-					new ControllCenter();
-					a.dispose();
-				}else { 
-					new popUpFailLogin();
-				}
-				
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			if(checkLogin == true) {
+				new ControllCenter();
+				a.dispose();
+				System.out.println(checkLogin);
+			}else { 
+				new popUpFailLogin();
 				
 			}
-//			for(FormatUserPass acc : arrUserPass.getArr()) {
-//				if(acc.getUser() == accountUserPass.getUser()) {
-//					new ControllCenter();
-//					a.dispose();
-//				}
-//			}
 			
 		});
 		//new ControllCenter(); 
+	}
+	public static void main(String args[]) {
+		try {
+			new ManagerAccount();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

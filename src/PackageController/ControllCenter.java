@@ -15,7 +15,7 @@ import javax.swing.ListModel;
 import PackageModel.*;
 import PackageView.*;
 import java.util.*;
-
+// su li screen two;
 public class ControllCenter {
 	storeData2 storeAccount;
 	private String textYourMoney;
@@ -101,7 +101,7 @@ public class ControllCenter {
 						Integer.parseInt(arrTextDate[1]),Integer.parseInt(arrTextDate[2]));
 				// Lay du lieu cua muc mo ta
 				String textDes = Screentwo.getDest().getText();
-//_________________________________________________________________________________________//				
+//_____________________________________________________________________________________//				
 				/*
 				getGUI_ja userVsPasswordOfYour = new getGUI_ja();
 				String userVaPassword = userVsPasswordOfYour.toString();
