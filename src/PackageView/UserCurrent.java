@@ -1,3 +1,4 @@
+package PackageView;
 
 //lop ni toi bang 2
 public class UserCurrent {

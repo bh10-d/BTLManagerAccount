@@ -1,3 +1,4 @@
+package PackageModel;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;

@@ -1,8 +1,11 @@
+package PackageModel;
 import java.sql.*;
 import java.util.*;
 public class DataMA{
-	public static void main(String[]args) throws SQLException {
-		
+//	public static void main(String[]args) throws SQLException {
+	
+	public DataMA() throws SQLException {
+	
 		Scanner sc = new Scanner(System.in);
 		
 		String n = "'admin'";
@@ -11,8 +14,9 @@ public class DataMA{
 		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			String connectionURL="jdbc:sqlserver://HieuBui\\SQLEXPRESS01:1433;databaseName=DataMA;integratedSecurity=true";
-			connection = DriverManager.getConnection(connectionURL, "sa", "03072002");
+			//String connectionURL="jdbc:sqlserver://HieuBui\\SQLEXPRESS01:1433;databaseName=DataMA;integratedSecurity=true";
+			String connectionURL="jdbc:sqlserver://DESKTOP-4VBPR8G\\SQLEXPRESS:1433;databaseName=ManageAccount;integratedSecurity=true";
+			connection = DriverManager.getConnection(connectionURL, "sa", "");
 			System.out.println("Ket noi thanh cong!!!!!!!!!!!!!!!");
 			
 			Statement stmt = connection.createStatement();
@@ -35,7 +39,9 @@ public class DataMA{
 			System.out.println("Ket noi that bai!!!!!!!!!!");
 			System.err.println(e.getMessage()+"\n"+e.getClass()+"\n"+e.getCause());
 		}
-		
+//	}
 	}
-	
+	public static void main(String args[]) throws SQLException {
+		new DataMA();
+	}
 }

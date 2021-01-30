@@ -1,3 +1,4 @@
+package PackageModel;
 //lop ni de dinh dang ngay thang nam
 public class Dates {
 	private int day;
@@ -19,6 +20,6 @@ public class Dates {
 		return year;
 	}
 	public String toString() {
-		return day+"/"+month+"/"+year;
+		return day+"-"+month+"-"+year;
 	}
 }
