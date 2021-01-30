@@ -43,13 +43,22 @@ public class Screentwo{
 		scrollPane.getViewport().add(listt);
 		scrollPane.setPreferredSize(new Dimension(370,428));
 //___________________________________________________________________________________________________//
+		
+//		ImageIcon background = new ImageIcon("images/lethanhcong5.png");
+//		JLabel setbackground = new JLabel();
+//		setbackground.setIcon(background);
+//		setbackground.setBounds(450, 0, 450, 600);
+//___________________________________________________________________________________________________//
 		// Khoi tao cac tieu de cho tung thanh phan
 		/*JLabel*/ yourmoney = new JLabel("Enter Money");
 		yourmoney.setFont(new Font("Calibri",Font.BOLD,30));
+		yourmoney.setForeground(Color.red);
 		/*JLabel*/ date = new JLabel("Date");
 		date.setFont(new Font("Calibri",Font.BOLD,30));
+		date.setForeground(Color.red);
 		/*JLabel*/ des = new JLabel("Description");
 		des.setFont(new Font("Calibri",Font.BOLD,30));
+		des.setForeground(Color.red);
 		/*JLabel*/ sum = new JLabel("Your account = ");
 		sum.setFont(new Font("Calibri",Font.BOLD,25));
 		/*JLabel*/ list = new JLabel("List");
@@ -112,6 +121,7 @@ public class Screentwo{
 		frame.add(dest);
 		frame.add(sumt);
 		frame.add(panel1);
+//		frame.add(setbackground);
 		// Thiet lap hien thi cho chuong trinh
 		frame.add(panel);
 		frame.setLayout(null);
