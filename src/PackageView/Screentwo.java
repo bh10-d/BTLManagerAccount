@@ -44,6 +44,13 @@ public class Screentwo{
 		scrollPane.getViewport().add(listt);
 		scrollPane.setPreferredSize(new Dimension(370,428));
 //___________________________________________________________________________________________________//
+		
+//		ImageIcon background = new ImageIcon("images/lethanhcong5.png");
+//		JLabel setbackground = new JLabel();
+//		setbackground.setIcon(background);
+//		setbackground.setBounds(450, 0, 450, 600);
+
+//___________________________________________________________________________________________________//
 		// Khoi tao cac tieu de cho tung thanh phan
 		/*JLabel*/ yourmoney = new JLabel("Enter Money");
 		yourmoney.setFont(new Font("Calibri",Font.BOLD,30));
