@@ -6,7 +6,7 @@ import PackageController.*;
 
 public class Account {
 	
-	private static long money = 0L;
+	private static long money = 0L;// d chua (datamoneys)
 	private String des;
 	private Dates date;
 	
@@ -25,6 +25,7 @@ public class Account {
 	public static void setMoneySub(long moneys) {
 		money -= moneys;
 	}
+
 	
 	public static long getMoney() {
 		return money;

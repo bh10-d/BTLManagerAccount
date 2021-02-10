@@ -8,14 +8,17 @@ public class DataMA{
 	
 		Scanner sc = new Scanner(System.in);
 		
-		String n = "'admin'";
+		String name = sc.next();
 		
+		String n = "'"+name+"'";//cuu tinh 
+		//String n = "'name'";
+
 		Connection connection = null;
 		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			//String connectionURL="jdbc:sqlserver://HieuBui\\SQLEXPRESS01:1433;databaseName=DataMA;integratedSecurity=true";
-			String connectionURL="jdbc:sqlserver://DESKTOP-4VBPR8G\\SQLEXPRESS:1433;databaseName=ManageAccount;integratedSecurity=true";
+			String connectionURL="jdbc:sqlserver://HieuBui\\\\SQLEXPRESS01:1433;databaseName=DataMA;integratedSecurity=true";
 			connection = DriverManager.getConnection(connectionURL, "sa", "");
 			System.out.println("Ket noi thanh cong!!!!!!!!!!!!!!!");
 			

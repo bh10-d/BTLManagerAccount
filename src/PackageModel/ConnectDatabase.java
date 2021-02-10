@@ -7,9 +7,9 @@ public class ConnectDatabase {
 	private Connection con;
 	
 	public ConnectDatabase() throws Exception {
-		String url = "jdbc:mysql://localhost:3306/storedataaccount";
-		String user = "root";
-		String password = "";
+		String url = "jdbc:sqlserver://HieuBui\\\\SQLEXPRESS01:1433;databaseName=DataMA;integratedSecurity=true";
+		String user = "sa";
+		String password = "03072002";
 		con = DriverManager.getConnection(url,user,password);
 		System.out.println("connect successful.....");
 				

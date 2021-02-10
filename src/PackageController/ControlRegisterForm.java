@@ -13,6 +13,8 @@ public class ControlRegisterForm {
 	private ConnectDatabase connect;
 	private RegisterForm rF;
 
+	
+	
 	public ControlRegisterForm() {
 		try {
 			connect = new ConnectDatabase();
@@ -26,12 +28,13 @@ public class ControlRegisterForm {
 		
 		try {
 			Statement sttm = connect.getCon().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+			// thuc hien cau lenh truy van tren database
 			ResultSet rs = sttm.executeQuery("select count(id) as countId from tableuserpassword");
 			rs.absolute(1);
 			rF.getRegisterButton().addActionListener(e -> {
-				String textFieldUser = rF.getRegisterUserTF().getText();
-				String textFieldPass = String.valueOf(rF.getRegisterPassTF().getPassword());
-				String textEnterFieldPass = String.valueOf(rF.getRegisterEnterPassTF().getPassword());
+				String textFieldUser = rF.getRegisterUserTF().getText(); // nhap tai khoan	
+				String textFieldPass = String.valueOf(rF.getRegisterPassTF().getPassword()); // nhap mat khau
+				String textEnterFieldPass = String.valueOf(rF.getRegisterEnterPassTF().getPassword());	// nhap lai mat khau
 				
 				try {
 					/*
@@ -52,7 +55,9 @@ public class ControlRegisterForm {
 								break;
 						}
 					}
+					//-----------------------------------------------------------------------
 					if(isExistUserPass == false && textFieldPass.equals(textEnterFieldPass)) {
+						// them du lieu tai khoan mat khau vao database
 						PreparedStatement ps2 = connect.getCon().prepareStatement("insert into tableuserpassword(users,passwords) values(?,?)");
 						ps2.setString(1, textFieldUser);
 						ps2.setString(2, textFieldPass);
@@ -81,8 +86,8 @@ public class ControlRegisterForm {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-	
+
 	}
-	
+//____________________________________________________________________________
 	
 }

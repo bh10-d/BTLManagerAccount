@@ -27,6 +27,7 @@ public class Screentwo{
 	public static void Screen() {
 		// Khoi tao cua so chuong trinh
 		JFrame frame = new JFrame("Account Manager");
+		//frame.setSize(900, 600);
 		frame.setMinimumSize(new Dimension(900, 600));
 		frame.setMaximumSize(new Dimension(900, 600));
 		// Khoi tao panel

@@ -5,7 +5,7 @@ import PackageModel.*;
 import PackageView.*;
 public class Main {
 	public static void main(String args[]) {
-		new ControlRegisterForm();
+		//new ControlRegisterForm();
 		/*
 		try {
 			ConnectDatabase a = new ConnectDatabase();
@@ -24,6 +24,13 @@ public class Main {
 			e.printStackTrace();
 		}
 		*/
+		
+		try {
+			ManagerAccount ma = new ManagerAccount();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 	}
