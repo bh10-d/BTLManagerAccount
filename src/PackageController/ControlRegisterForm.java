@@ -13,13 +13,10 @@ public class ControlRegisterForm {
 	private ConnectDatabase connect;
 	private RegisterForm rF;
 
-	
-	
 	public ControlRegisterForm() {
 		try {
 			connect = new ConnectDatabase();
 		} catch (Exception e2) {
-			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		rF = new RegisterForm();
@@ -35,27 +32,15 @@ public class ControlRegisterForm {
 				String textFieldUser = rF.getRegisterUserTF().getText(); // nhap tai khoan	
 				String textFieldPass = String.valueOf(rF.getRegisterPassTF().getPassword()); // nhap mat khau
 				String textEnterFieldPass = String.valueOf(rF.getRegisterEnterPassTF().getPassword());	// nhap lai mat khau
-				
 				try {
-					/*
-					if(rs.getInt(1) == 0) {
-						PreparedStatement ps = connect.getCon().prepareStatement("insert into tableuserpassword(users,passwords) values(?,?)");
-						ps.setString(1, textFieldUser);
-						ps.setString(2, textFieldPass);
-						ps.executeUpdate();
-						new popUpRegisterSuccess();
-					}
-					*/
 					boolean isExistUserPass = false;
 					ResultSet exeQuery2 = sttm.executeQuery("select * from tableuserpassword");
 					while(exeQuery2.next()) {
-							
 						if(exeQuery2.getString("users").equals(textFieldUser)) {
 								isExistUserPass = true;
 								break;
 						}
 					}
-					//-----------------------------------------------------------------------
 					if(isExistUserPass == false && textFieldPass.equals(textEnterFieldPass)) {
 						// them du lieu tai khoan mat khau vao database
 						PreparedStatement ps2 = connect.getCon().prepareStatement("insert into tableuserpassword(users,passwords) values(?,?)");
@@ -67,27 +52,12 @@ public class ControlRegisterForm {
 					}else {
 						new popUpFailRegister();
 					}
-						
-					
-					
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-			
-				
-				
-				
-				
 			});
-			
-		
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-
-	}
-//____________________________________________________________________________
-	
+	}	
 }

@@ -18,6 +18,7 @@ public class Screentwo{
 	private static JButton Add;
 	private static JButton Charts;
 	private static JButton Sub;
+	private static JButton Del;
 	private static JTextField moneyt;
 	private static JTextField datet;
 	private static JTextField dest;
@@ -57,6 +58,8 @@ public class Screentwo{
 		yourmoney.setFont(new Font("Calibri",Font.BOLD,30));
 		/*JLabel*/ date = new JLabel("Date");
 		date.setFont(new Font("Calibri",Font.BOLD,30));
+		JLabel format = new JLabel("(mm/dd/yyyy)");
+		format.setFont(new Font("Calibri",Font.BOLD,20));
 		/*JLabel*/ des = new JLabel("Description");
 		des.setFont(new Font("Calibri",Font.BOLD,30));
 		/*JLabel*/ sum = new JLabel("Your account = ");
@@ -75,6 +78,9 @@ public class Screentwo{
 		//Sub button!!!!!
 		Sub = new JButton("Sub");
 		Sub.setBackground(Color.pink);
+		//Delete button!!!!!
+		Del = new JButton("Del");
+		Del.setBackground(Color.pink);
 		// Khoi tao cac vung nhap du lieu vao chuong trinh
 		/*JTextField*/ moneyt = new JTextField();
 		moneyt.setFont(new Font("Calibri", Font.BOLD, 30));
@@ -91,6 +97,7 @@ public class Screentwo{
 		// Khoi tao cac label 
 		yourmoney.setBounds(500, 50, 200,30);
 		date.setBounds(500, 200, 200, 30);
+		format.setBounds(565, 199, 200, 30);
 		des.setBounds(500, 350, 200, 30);
 		sum.setBounds(10, 480, 250, 60);
 		list.setBounds(40, 0, 100, 50);//label
@@ -100,6 +107,7 @@ public class Screentwo{
 		Add.setBounds(500, 500, 90, 30);
 		Charts.setBounds(740, 500, 90, 30);
 		Sub.setBounds(620, 500, 90, 30);
+		Del.setBounds(740,500,90,30);
 		// Thiet lap vi tri cho cac vung nhap du lieu
 		moneyt.setBounds(500, 100, 300, 50);
 		datet.setBounds(500, 250, 300, 50);
@@ -110,12 +118,14 @@ public class Screentwo{
 		panel1.add(scrollPane);
 		frame.add(yourmoney);
 		frame.add(date);
+		frame.add(format);
 		frame.add(des);
 		frame.add(sum);
 		frame.add(list);
 		frame.add(Add);
-		frame.add(Charts);
+		//frame.add(Charts);
 		frame.add(Sub);
+		frame.add(Del);
 		frame.add(moneyt);
 		frame.add(datet);
 		frame.add(dest);
@@ -174,6 +184,9 @@ public class Screentwo{
 	
 	public static JButton getSub() {
 		return Sub;
+	}
+	public static JButton getDel() {
+		return Del;
 	}
 	
 	public static JPanel getPanel() { 

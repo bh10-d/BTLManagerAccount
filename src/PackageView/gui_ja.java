@@ -36,20 +36,7 @@ public class gui_ja extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	/*
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					gui_ja frame = new gui_ja();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	*/
+	
 	/**
 	 * Create the frame.
 	 */
@@ -100,10 +87,6 @@ public class gui_ja extends JFrame {
 		contentPane.add(FieldPass, gbc_FieldPass);
 		
 		ButtonREGISTER = new JButton("REGISTER");
-		//ButtonREGISTER.addActionListener(new ActionListener() {
-		//	public void actionPerformed(ActionEvent e) {
-		//	}
-		//});
 		GridBagConstraints gbc_ButtonREGISTER = new GridBagConstraints();
 		gbc_ButtonREGISTER.gridwidth = 3;
 		gbc_ButtonREGISTER.anchor = GridBagConstraints.NORTHEAST;
@@ -113,10 +96,6 @@ public class gui_ja extends JFrame {
 		contentPane.add(ButtonREGISTER, gbc_ButtonREGISTER);
 		
 		ButtonLOGIN = new JButton("LOGIN");
-		//ButtonLOGIN.addActionListener(new ActionListener() {
-		//	public void actionPerformed(ActionEvent e) {
-		//	}
-		//});
 		GridBagConstraints gbc_ButtonLOGIN = new GridBagConstraints();
 		gbc_ButtonLOGIN.insets = new Insets(0, 0, 5, 5);
 		gbc_ButtonLOGIN.anchor = GridBagConstraints.NORTH;
@@ -134,21 +113,10 @@ public class gui_ja extends JFrame {
 	public JButton getButtonREGISTER() {
 		return ButtonREGISTER;
 	}
-	
 	public JButton getButtonLOGIN() {
 		return ButtonLOGIN;
 	}
-	
 	public String toString() {
 		return textFieldUSER+" "+FieldPass;
 	}
-//	public static void main(String args[]) {
-//		RegisterForm a = new RegisterForm();
-//		a.setVisible(true);
-//		a.getRegisterButton().addActionListener(e -> {
-//			String b = String.valueOf(a.getRegisterPassTF().getPassword()) ;
-//			System.out.println(b);
-//			
-//		});
-//	}
 }

@@ -19,7 +19,7 @@ public class Dates {
 	public int getYear() {
 		return year;
 	}
-	public String toString() {
-		return day+"-"+month+"-"+year;
-	}
+//	public String toString() {
+//		return day+"-"+month+"-"+year;
+//	}
 }

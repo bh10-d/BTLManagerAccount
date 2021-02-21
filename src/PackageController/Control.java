@@ -13,14 +13,16 @@ public class Control{
 	private long longYourMoney;
 	private String textDate;
 	private Dates YourDate;
-	private String[] arrTextDate;
-	private String textDes;
+//	private String[] arrTextDate;
+	private String textDes;//
 	private Account account;
-	private ArrayList<Account> temporaryStorage;
+//	private ArrayList<Account> temporaryStorage;
 	private String textLabels;
-	private storeData2 storeAccount;
+//	private storeData2 storeAccount;
 	private String textdate;//nhan du lieu//
 	private String textmoney;//nhan du lieu//
+	
+//	private String test;
 	
 	public Control() {
 		
@@ -33,9 +35,14 @@ public class Control{
 		this.textmoney = textmoney;
 		
 	}
-	
-	
-	
+/////////
+//	public String gettest() {
+//		return test;
+//	}
+//	public void settest(String test) {
+//		this.test = test;
+//	}
+/////////	
 	
 	public String getTextYourMoney() {
 		return textYourMoney;
@@ -61,12 +68,12 @@ public class Control{
 	public void setYourDate(Dates yourDate) {
 		YourDate = yourDate;
 	}
-	public String[] getArrTextDate() {
-		return arrTextDate;
-	}
-	public void setArrTextDate(String[] arrTextDate) {
-		this.arrTextDate = arrTextDate;
-	}
+//	public String[] getArrTextDate() {
+//		return arrTextDate;
+//	}
+//	public void setArrTextDate(String[] arrTextDate) {
+//		this.arrTextDate = arrTextDate;
+//	}
 	public String getTextDes() {
 		return textDes;
 	}
@@ -79,24 +86,24 @@ public class Control{
 	public void setAccount(Account account) {
 		this.account = account;
 	}
-	public ArrayList<Account> getTemporaryStorage() {
-		return temporaryStorage;
-	}
-	public void setTemporaryStorage(ArrayList<Account> temporaryStorage) {
-		this.temporaryStorage = temporaryStorage;
-	}
+//	public ArrayList<Account> getTemporaryStorage() {
+//		return temporaryStorage;
+//	}
+//	public void setTemporaryStorage(ArrayList<Account> temporaryStorage) {
+//		this.temporaryStorage = temporaryStorage;
+//	}
 	public String getTextLabels() {
 		return textLabels;
 	}
 	public void setTextLabels(String textLabels) {
 		this.textLabels = textLabels;
 	}
-	public storeData2 getStoreAccount() {
-		return storeAccount;
-	}
-	public void setStoreAccount(storeData2 storeAccount) {
-		this.storeAccount = storeAccount;
-	}
+//	public storeData2 getStoreAccount() {
+//		return storeAccount;
+//	}
+//	public void setStoreAccount(storeData2 storeAccount) {
+//		this.storeAccount = storeAccount;
+//	}
 //	public String getTextdate() {
 //		return textdate;
 //	}
@@ -108,6 +115,9 @@ public class Control{
 	}
 	public void setTextmoney(String textmoney) {
 		this.textmoney = textmoney;
+	}
+	public String toString1() {
+		return textdate+","+textDes+","+textmoney;
 	}
 	
 	@Override
